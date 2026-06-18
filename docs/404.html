@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/zenolith/favicon-light.ico" sizes="any" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/x-icon" href="/zenolith/favicon-dark.ico" sizes="any" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/x-icon" href="/zenolith/favicon.ico" sizes="any" data-zenolith-favicon="active" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const storageKey = "zenolith-theme";
+        const stored = localStorage.getItem(storageKey);
+        const theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+
+        document.documentElement.classList.add(theme);
+        document.documentElement.dataset.appBootId =
+          Date.now().toString(36) + Math.random().toString(36).slice(2);
+      })();
+    </script>
+    <title>Zenolith</title>
+    <script type="module" crossorigin src="/zenolith/assets/index-M_TBvSJz.js"></script>
+    <link rel="stylesheet" crossorigin href="/zenolith/assets/index-qh1OgG5F.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
