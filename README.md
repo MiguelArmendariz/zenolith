@@ -1,7 +1,7 @@
 # Zenolith
 
 Public documentation, issue tracking, and feature requests for the Zenolith
-diagramming library.
+rendering engine.
 
 - [Documentation](https://miguelarmendariz.github.io/zenolith/)
 - [Report an issue or request a feature](https://github.com/MiguelArmendariz/zenolith/issues/new/choose)
